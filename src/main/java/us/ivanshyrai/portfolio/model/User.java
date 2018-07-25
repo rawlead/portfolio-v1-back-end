@@ -2,6 +2,7 @@ package us.ivanshyrai.portfolio.model;
 
 import org.hibernate.annotations.NaturalId;
 import us.ivanshyrai.portfolio.model.audit.DateAudit;
+import us.ivanshyrai.portfolio.model.audit.UserDateAudit;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -50,6 +51,8 @@ public class User extends DateAudit {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
+
+
 
     public User() {
     }

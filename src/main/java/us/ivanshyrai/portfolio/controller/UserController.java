@@ -80,6 +80,8 @@ public class UserController {
                                                   @RequestParam(value = "size", defaultValue = AppConstants.DEFAULT_PAGE_SIZE) int size) {
         return userService.getAllUsers(currentUser, page, size);
     }
+
+
 }
 
 
